@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: rgb(0, 0, 0); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+
+    a{
+        color: black;
+        font-family: -apple-system, sans-serif;
+        font-size: 22px;
+        text-decoration: none;
+
+        &:hover{
+            color: #00bf63;
+        }
+    }
+    
+
+    img{
+        width: 250px;
+    }
+}
+
+.hero-section{
+    position: relative;
+    width: 99.5%;
+    height: 960px;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(icons/15585.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: blur(2px); 
+        border-radius: 15px;
+    }
+    h2{
+        font-size: 100px;
+        font-family: "Noto Sans", sans-serif;
+        position: relative;
+        margin-bottom: 15px;
+        line-height: 90px;
+    }
+    p{
+        position: relative;
+        font-size: 35px;
+        font-family: "Noto Sans", sans-serif;
+        width: 600px;
+    }
+    button{
+        margin-top: 30px;
+        position: relative;
+        font-family: "Noto Sans", sans-serif;
+        width: 250px;
+        height: 60px;
+        color: #02bd62;
+        background-color: rgb(255, 255, 255);
+        border-radius: 30px;
+        border: none;
+        font-size: 20px;
+        font-family: -apple-system, sans-serif;
+        z-index: 1;
+        cursor: pointer;
+
+        &:hover{
+            color: #000000;
+            background-color: #ececec;
+        }
+    }
+
+}
+
+.services{
+    margin-top: 30px;
+    width: 80%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .header{
+        display: flex;
+        width: 160px;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        border-radius: 30px;
+        border: 1px solid black;
+
+        i{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            width: 52px;
+            height: 52px;
+            background-color: #00bf63;
+            border-radius: 100%;
+            transform: translateX(-4px);
+            font-size: 25px;
+        }
+
+        p{
+            margin-right: 4px;
+            font-family: "Noto Sans", sans-serif;
+            font-size: 15px;
+        }
+    }
+
+    h3{
+        font-family: "Noto Sans", sans-serif;
+        font-size: 50px;
+    }
+    p{
+        font-family: "Noto Sans", sans-serif;
+        font-size: 25px;
+    }
+
+    .grid-cont {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 700px);
+        grid-auto-rows: 350px;                 
+        gap: 30px;
+
+        .box {
+            width: 700px;
+            height: 350px;
+            background-color: #fafafa;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            padding: 60px;
+            gap: 5px;
+
+            i{
+                width: 65px;
+                height: 65px;
+                font-size: 30px;
+                background-color: #00bf63;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                color: white;
+            }
+
+            h4{
+                font-family: "Noto Sans", sans-serif;
+                font-size: 35px;
+            }
+            p{
+                font-family: "Noto Sans", sans-serif;
+                font-size: 24px;
+            }
+        }
+    }
+
+}
+
+.mission{
+    padding-top: 50px;
+    width: 1430px;
+    height: 600px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+    border-radius: 20px;
+
+    h2{
+        font-family: "Noto Sans", sans-serif;
+        font-size: 55px;
+        color: #00bf63;
+    }
+    h4{
+        font-family: "Noto Sans", sans-serif;
+        font-size: 30px;
+    }
+   
+
+    .outside-list {
+        list-style-position: outside;
+        font-family: "Noto Sans", sans-serif;
+        font-size: 24px;
+    }
+
+    .inside-list {
+        list-style-position: inside;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 22px;
+    }   
+}
+
+.news{
+    padding-top: 20px;
+    width: 80%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .header{
+        display: flex;
+        width: 160px;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;
+        border-radius: 30px;
+        border: 1px solid black;
+
+        i{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            width: 52px;
+            height: 52px;
+            background-color: #00bf63;
+            border-radius: 100%;
+            transform: translateX(-4px);
+            font-size: 25px;
+        }
+
+        p{
+            margin-right: 4px;
+            font-family: "Noto Sans", sans-serif;
+            font-size: 15px;
+        }
+    }
+    h3{
+        font-family: "Noto Sans", sans-serif;
+        font-size: 45px;
+    }
+    p{
+        font-family: "Noto Sans", sans-serif;
+        font-size: 20px;
+    }
+
+    .news-cont{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 600px);
+        grid-auto-rows: 400px;                 
+        gap: 50px;
+
+        .box{
+            width: 600px;
+            height: 400px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 5px;
+
+            .img{
+                width: 100%;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                border-radius: 20px;
+                img{
+                    width: 555px;
+                }
+            }
+            .time{
+                color: #595959;
+                font-family: "Noto Sans", sans-serif;
+                font-size: 16px;
+                cursor:default;
+            }
+            h4{
+                font-family: "Noto Sans", sans-serif;
+                font-size: 22px;
+            }
+            p{
+                color: #00bf63;
+                font-size: 16px;
+                cursor: pointer;
+
+                &:hover{
+                    color: #000000;
+                }
+            }
+        }
+    }
+
+}
+
+.footer{
+    padding: 50px 150px 50px 150px;
+    width: 100%;
+    height: 350px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+
+    .top{
+        display: flex;
+        justify-content: space-between;
+
+        .top-left{
+            color: white;
+            font-size: 18px;
+            font-family: "Noto Sans", sans-serif;
+            width: 500px;
+            height: 200px;
+            img{
+                width: 300px;
+            }
+        }
+        .top-right{
+            width: 600px;
+            height: 200px;
+            display: flex;
+            justify-content: space-between;
+            font-family: "Noto Sans", sans-serif;
+            color: white;
+
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 18px;
+
+                &:hover{
+                    color: #00bf63;
+                }
+            }
+            h3{
+                font-size: 24px;
+            }
+            .service{
+                display: flex;
+                flex-direction: column;
+            }
+            .about{
+                display: flex;
+                flex-direction: column;
+            }
+            .resource{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .bottom{
+        font-family: "Noto Sans", sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        border-top: 1px solid #ffffff;
+        color: white;
+
+        .bottom-left{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        p{
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .bottom-right{
+            display: flex;
+            gap: 15px;
+        }
+        i{
+            font-size: 22px;
+            color: white;
+            cursor: pointer;
+
+            &:hover {
+                color: #00bf63;
+            }
+        }
+    }
+}
+
+    
+
